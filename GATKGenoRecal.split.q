@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Example usage:
-# PREFIX=Kruer_WESMarch2017 INDIR=/fast/users/a1211880/vcf/gVcfDumpingGround OUTDIR=/data/neurogenetics/variants/gvcf sbatch GATKGenoRecal.split.q -J GATKGeno
+# PREFIX=Kruer_WESMarch2017 INDIR=/fast/users/a1211880/vcf/gVcfDumpingGround OUTDIR=/data/neurogenetics/variants/gvcf sbatch GATKGenoRecal.split.q
+
+#SBATCH -J GATKGeno
+#SBATCH -o /fast/users/a1211880/slurmOUT/slurm-%j.out
 
 #SBATCH -A robinson
 #SBATCH -p batch
