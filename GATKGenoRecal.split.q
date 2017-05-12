@@ -13,7 +13,7 @@
 # Notification configuration 
 #SBATCH --mail-type=END                                         
 #SBATCH --mail-type=FAIL                                        
-#SBATCH --mail-user=$USER@adelaide.edu.au
+#SBATCH --mail-user=atma.ivancevic@adelaide.edu.au
 
 # load modules
 module load Java/1.8.0_121
