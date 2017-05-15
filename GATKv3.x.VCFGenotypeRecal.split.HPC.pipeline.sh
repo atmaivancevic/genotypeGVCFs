@@ -12,8 +12,8 @@ ChrIndexPath=$GATKREFPATH/$BWAINDEX.chridx #Location of index bed files
 IndexBedFiles=01.hg19-M1.bed,02.hg19-2-3.bed,03.hg19-4-5.bed,04.hg19-6-7.bed,05.hg19-8-10.bed,06.hg19-11-13.bed,07.hg19-14-17.bed,08.hg19-18etc.bed # A comma separated array of names of index files
 arrIndexBedFiles=$(echo $IndexBedFiles | tr "," "\n")
 #SCRIPTPATH=/home/users/mcorbett/Scripts # Location of the cleanup script template
-BUILD=$(echo $BWAINDEX | awk '{print substr($1, 1, length($1) - 3)}') # Genome build used = $BWAINDEX less the .fa, this will be incorporated into file names.
-#BUILD=hg19 # If using hg19_1stM_unmask_ran_all.fa as GATKINDEX
+#BUILD=$(echo $BWAINDEX | awk '{print substr($1, 1, length($1) - 3)}') # Genome build used = $BWAINDEX less the .fa, this will be incorporated into file names.
+BUILD=hg19 # If using hg19_1stM_unmask_ran_all.fa as GATKINDEX
 tmpDir=/tmp/$USER/$SLURM_JOBID # Use a tmp directory in /tmp for all of the GATK temp files
 
 usage()
