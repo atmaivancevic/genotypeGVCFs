@@ -1,17 +1,14 @@
 #!/bin/bash
 
 # Example usage:
-# PREFIX=Kruer_WESMarch2017 INDIR=/fast/users/a1211880/vcf/gVcfDumpingGround OUTDIR=/data/neurogenetics/variants/gvcf sbatch GATKGenoRecal.split.q
-
-#SBATCH -J GATKGeno
-#SBATCH -o /fast/users/a1211880/slurmOUT/slurm-%j.out
+# PREFIX=Kruer_WESMarch2017 INDIR=/fast/users/a1211880/vcf/gVcfDumpingGround OUTDIR=/data/neurogenetics/variants/gvcf sbatch GATKGenoRecal.split.q -J GATKGeno
 
 #SBATCH -A robinson
 #SBATCH -p batch
 #SBATCH -N 1
 #SBATCH -n 16
 #SBATCH --time=3-00:00
-#SBATCH --mem=50GB
+#SBATCH --mem=80GB
 
 # Notification configuration 
 #SBATCH --mail-type=END                                         
