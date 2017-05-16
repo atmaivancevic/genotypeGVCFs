@@ -129,10 +129,10 @@ java -Xmx30g -Djava.io.tmpdir=$tmpDir -jar $GATKPATH/GenomeAnalysisTK.jar \
 -T VariantRecalibrator \
 -R $GATKREFPATH/$GATKINDEX \
 -input $OUTPREFIX.snps.vcf \
--resource:hapmap,known=false,training=true,truth=true,prior=15.0 $GATKREFPATH/hapmap_3.3.$BUILD.vcf \
--resource:omni,known=false,training=true,truth=false,prior=12.0 $GATKREFPATH/1000G_omni2.5.$BUILD.vcf \
--resource:1000G,known=false,training=true,truth=false,prior=10.0 $GATKREFPATH/1000G_phase1.snps.high_confidence.$BUILD.vcf \
--resource:dbsnp,known=true,training=false,truth=false,prior=2.0 $GATKREFPATH/dbsnp_138.$BUILD.vcf \
+-resource:hapmap,known=false,training=true,truth=true,prior=15.0 $FASTDIR/hapmap_3.3.$BUILD.vcf \
+-resource:omni,known=false,training=true,truth=false,prior=12.0 $FASTDIR/1000G_omni2.5.$BUILD.vcf \
+-resource:1000G,known=false,training=true,truth=false,prior=10.0 $FASTDIR/1000G_phase1.snps.high_confidence.$BUILD.vcf \
+-resource:dbsnp,known=true,training=false,truth=false,prior=2.0 $FASTDIR/dbsnp_138.$BUILD.vcf \
 -an DP -an MQ -an QD -an MQRankSum -an ReadPosRankSum -an FS -an SOR \
 -mode SNP \
 -nt 16 \
@@ -159,8 +159,8 @@ java -Xmx30g -Djava.io.tmpdir=$tmpDir -jar $GATKPATH/GenomeAnalysisTK.jar \
 -R $GATKREFPATH/$GATKINDEX \
 -input $OUTPREFIX.snps.recal.vcf \
 --maxGaussians 4 \
--resource:mills,known=true,training=true,truth=true,prior=12.0 $GATKREFPATH/Mills_and_1000G_gold_standard.indels.$BUILD.vcf \
--resource:dbsnp,known=true,training=false,truth=false,prior=2.0 $GATKREFPATH/dbsnp_138.$BUILD.vcf \
+-resource:mills,known=true,training=true,truth=true,prior=12.0 $FASTDIR/Mills_and_1000G_gold_standard.indels.$BUILD.vcf \
+-resource:dbsnp,known=true,training=false,truth=false,prior=2.0 $FASTDIR/dbsnp_138.$BUILD.vcf \
 -an DP -an QD -an MQRankSum -an ReadPosRankSum -an FS -an SOR \
 -mode INDEL \
 -nt 16 \
