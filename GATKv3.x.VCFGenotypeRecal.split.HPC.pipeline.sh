@@ -2,9 +2,7 @@
 # See usage for description and history
 
 # Script variables (set and forget)
-export FASTDIR=/fast/users/$USER
-
-GATKPATH=$FASTDIR/executables/GenomeAnalysisTK-3.7 # Where the GATK program is even if in your $PATH
+GATKPATH=/data/neurogenetics/executables/GenomeAnalysisTK-3.7 # Where the GATK program is even if in your $PATH
 GATKREFPATH=/data/neurogenetics/RefSeq/GATK #Refseq index library locations
 BWAINDEX=hg19_1stM_unmask_ran_all.fa
 GATKINDEX=$BWAINDEX # Base name of GATK indexes (usually the same as the $BWAINDEX)
